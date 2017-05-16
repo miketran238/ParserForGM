@@ -1,0 +1,6 @@
+digraph "Test_anonymous_class.misuse#String[]#" {
+0 [label="public static void misuse(String[] args){\l  JFrame f=new JFrame(\"Main Window\");\l  f.pack();\l  f.setVisible(true);\l}\l\l" shape=box style=dotted]
+1 [label="Component.setVisible()" shape=box]
+2 [label="Window.pack()" shape=box]
+2 -> 1 [label="order" style=dotted];
+}

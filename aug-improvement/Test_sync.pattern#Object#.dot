@@ -1,0 +1,6 @@
+digraph "Test_sync.pattern#Object#" {
+0 [label="public void pattern(Object o){\lsynchronized (o) {\l    o.hashCode();\l    o.hashCode();\l  }\l}\l\l" shape=box style=dotted]
+1 [label="Object.hashCode()" shape=box]
+2 [label="Object.hashCode()" shape=box]
+2 -> 1 [label="order" style=dotted];
+}

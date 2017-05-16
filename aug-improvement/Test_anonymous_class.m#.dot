@@ -1,0 +1,4 @@
+digraph "Test_anonymous_class.m#" {
+0 [label="public void m(){\l  final File lockFile=new File(\"\");\l  new Object(){\l    public boolean obtain() throws IOException {\l      if (DISABLE_LOCKS) {\l        return true;\l      }\l      return lockFile.createNewFile();\l    }\l  }\l;\l}\l\l" shape=box style=dotted]
+1 [label="File.createNewFile()" shape=box]
+}

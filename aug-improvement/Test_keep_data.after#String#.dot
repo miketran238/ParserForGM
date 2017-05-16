@@ -1,0 +1,8 @@
+digraph "Test_keep_data.after#String#" {
+0 [label="public void after(String s){\l  StringBuffer sb=new StringBuffer();\l  sb.append(s.length());\l  sb.toString();\l}\l\l" shape=box style=dotted]
+1 [label="AbstractStringBuilder.append()" shape=box]
+2 [label="CharSequence.length()" shape=box]
+3 [label="Object.toString()" shape=box]
+2 -> 1 [label="order" style=dotted];
+1 -> 3 [label="order" style=dotted];
+}

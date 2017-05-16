@@ -1,0 +1,5 @@
+digraph "Test_try.pattern1#OutputStream#String#" {
+0 [label="public void pattern1(OutputStream out,String value) throws IOException {\l  Writer writer=null;\l  try {\l    writer=new PrintWriter(out);\l    writer.write(value + \"\");\l  }\l catch (  IOException e) {\l    if (writer != null) {\l      writer.close();\l    }\l  }\l}\l\l" shape=box style=dotted]
+1 [label="AutoCloseable.close()" shape=box]
+2 [label="Writer.write()" shape=box]
+}

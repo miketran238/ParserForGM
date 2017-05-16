@@ -1,0 +1,16 @@
+digraph "InverseStore.m#" {
+0 [label="void m(){\l  sb.append(1).append(\"2\");\l  sb.toString();\l}\l\l" shape=box style=dotted]
+1 [label="AbstractStringBuilder.append()" shape=box]
+2 [label="AbstractStringBuilder.append()" shape=box]
+3 [label="Object.toString()" shape=box]
+4 [label="String" shape=ellipse]
+5 [label="StringBuffer" shape=ellipse]
+6 [label="StringBuffer" shape=ellipse]
+7 [label="int" shape=ellipse]
+5 -> 1 [label="recv" style=dotted];
+7 -> 1 [label="para1" style=dotted];
+4 -> 2 [label="para1" style=dotted];
+1 -> 2 [label="recv" style=dotted];
+6 -> 3 [label="recv" style=dotted];
+2 -> 3 [label="dep" style=dotted];
+}

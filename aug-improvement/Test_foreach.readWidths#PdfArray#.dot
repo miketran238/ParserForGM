@@ -1,0 +1,24 @@
+digraph "Test_foreach.readWidths#PdfArray#" {
+0 [label="private IntHashtable readWidths(PdfArray ws){\l  IntHashtable hh=new IntHashtable();\l  if (ws == null)   return hh;\l  for (int k=0; k < ws.size(); ++k) {\l    int c1=((PdfNumber)PdfReader.getPdfObjectRelease(ws.getPdfObject(k))).intValue();\l    PdfObject obj=PdfReader.getPdfObjectRelease(ws.getPdfObject(++k));\l    if (obj.isArray()) {\l      PdfArray a2=(PdfArray)obj;\l      for (int j=0; j < a2.size(); ++j) {\l        int c2=((PdfNumber)PdfReader.getPdfObjectRelease(a2.getPdfObject(j))).intValue();\l        hh.put(c1++,c2);\l      }\l    }\l else {\l      int c2=((PdfNumber)obj).intValue();\l      int w=((PdfNumber)PdfReader.getPdfObjectRelease(ws.getPdfObject(++k))).intValue();\l      for (; c1 <= c2; ++c1)       hh.put(c1,w);\l    }\l  }\l  return hh;\l}\l\l" shape=box style=dotted]
+1 [label="IntHashtable.put()" shape=box]
+2 [label="IntHashtable.put()" shape=box]
+3 [label="PdfArray.getPdfObject()" shape=box]
+4 [label="PdfArray.getPdfObject()" shape=box]
+5 [label="PdfArray.getPdfObject()" shape=box]
+6 [label="PdfArray.getPdfObject()" shape=box]
+7 [label="PdfArray.size()" shape=box]
+8 [label="PdfArray.size()" shape=box]
+9 [label="PdfNumber.intValue()" shape=box]
+10 [label="PdfNumber.intValue()" shape=box]
+11 [label="PdfNumber.intValue()" shape=box]
+12 [label="PdfNumber.intValue()" shape=box]
+13 [label="PdfObject.isArray()" shape=box]
+14 [label="PdfReader.getPdfObjectRelease()" shape=box]
+15 [label="PdfReader.getPdfObjectRelease()" shape=box]
+16 [label="PdfReader.getPdfObjectRelease()" shape=box]
+17 [label="PdfReader.getPdfObjectRelease()" shape=box]
+6 -> 14 [label="order" style=dotted];
+4 -> 15 [label="order" style=dotted];
+3 -> 16 [label="order" style=dotted];
+5 -> 17 [label="order" style=dotted];
+}

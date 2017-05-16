@@ -1,0 +1,7 @@
+digraph "Test_anonymous_class.pattern#String[]#" {
+0 [label="public static void pattern(String[] args){\l  SwingUtilities.invokeLater(new Runnable(){\l    public void run(){\l      JFrame f=new JFrame(\"Main Window\");\l      f.pack();\l      f.setVisible(true);\l    }\l  }\l);\l}\l\l" shape=box style=dotted]
+1 [label="Component.setVisible()" shape=box]
+2 [label="SwingUtilities.invokeLater()" shape=box]
+3 [label="Window.pack()" shape=box]
+3 -> 1 [label="order" style=dotted];
+}

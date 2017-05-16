@@ -1,0 +1,11 @@
+digraph "Test_foreach.p#" {
+0 [label="void p(){\l  for (  Map.Entry<Integer,Integer> kv : names.entrySet()) {\l    if (kv.getKey() < 256) {\l      cidbyte2uni[kv.getKey().intValue()]=(char)kv.getValue().intValue();\l    }\l  }\l}\l\l" shape=box style=dotted]
+1 [label="Map.Entry.getKey()" shape=box]
+2 [label="Map.Entry.getKey()" shape=box]
+3 [label="Map.Entry.getValue()" shape=box]
+4 [label="Map.entrySet()" shape=box]
+5 [label="UNKNOWN.intValue()" shape=box]
+6 [label="UNKNOWN.intValue()" shape=box]
+1 -> 5 [label="order" style=dotted];
+3 -> 6 [label="order" style=dotted];
+}

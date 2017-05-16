@@ -1,0 +1,3 @@
+digraph "Test_control.isAvailable#Object#" {
+0 [label="private static boolean isAvailable(Object o){\l  return false;\l}\l\l" shape=box style=dotted]
+}

@@ -1,0 +1,3 @@
+digraph "Test_try_resources.pattern#File#" {
+0 [label="public void pattern(File file) throws IOException {\l}\l\l" shape=box style=dotted]
+}

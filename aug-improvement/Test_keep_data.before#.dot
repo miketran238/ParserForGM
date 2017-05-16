@@ -1,0 +1,13 @@
+digraph "Test_keep_data.before#" {
+0 [label="public void before(){\l  StringBuffer sb=new StringBuffer();\l  sb.append(\"\");\l  sb.append(s.length());\l  sb.append(\"\");\l  sb.toString();\l}\l\l" shape=box style=dotted]
+1 [label="AbstractStringBuilder.append()" shape=box]
+2 [label="AbstractStringBuilder.append()" shape=box]
+3 [label="AbstractStringBuilder.append()" shape=box]
+4 [label="CharSequence.length()" shape=box]
+5 [label="Object.toString()" shape=box]
+1 -> 2 [label="order" style=dotted];
+4 -> 2 [label="order" style=dotted];
+2 -> 3 [label="order" style=dotted];
+1 -> 4 [label="order" style=dotted];
+3 -> 5 [label="order" style=dotted];
+}

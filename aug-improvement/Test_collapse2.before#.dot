@@ -1,0 +1,16 @@
+digraph "Test_collapse2.before#" {
+0 [label="public void before(){\l  StringBuffer sb=new StringBuffer();\l  sb.append(\"\");\l  sb.append(m());\l  for (; ; ) {\l    sb.append(n());\l    sb.append(\"\");\l  }\l  sb.append(\"\");\l  sb.toString();\l}\l\l" shape=box style=dotted]
+1 [label="AbstractStringBuilder.append()" shape=box]
+2 [label="AbstractStringBuilder.append()" shape=box]
+3 [label="AbstractStringBuilder.append()" shape=box]
+4 [label="AbstractStringBuilder.append()" shape=box]
+5 [label="AbstractStringBuilder.append()" shape=box]
+6 [label="Object.toString()" shape=box]
+7 [label="Test_collapse2.m()" shape=box]
+8 [label="Test_collapse2.n()" shape=box]
+2 -> 1 [label="order" style=dotted];
+5 -> 3 [label="order" style=dotted];
+4 -> 5 [label="order" style=dotted];
+3 -> 6 [label="order" style=dotted];
+2 -> 7 [label="order" style=dotted];
+}

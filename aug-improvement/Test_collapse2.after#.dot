@@ -1,0 +1,9 @@
+digraph "Test_collapse2.after#" {
+0 [label="public void after(){\l  StringBuffer sb=new StringBuffer();\l  sb.append(\"\");\l  for (; ; ) {\l    sb.append(\"\");\l  }\l  sb.append(\"\");\l  sb.toString();\l}\l\l" shape=box style=dotted]
+1 [label="AbstractStringBuilder.append()" shape=box]
+2 [label="AbstractStringBuilder.append()" shape=box]
+3 [label="AbstractStringBuilder.append()" shape=box]
+4 [label="Object.toString()" shape=box]
+3 -> 1 [label="order" style=dotted];
+1 -> 4 [label="order" style=dotted];
+}

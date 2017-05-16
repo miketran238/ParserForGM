@@ -1,0 +1,5 @@
+digraph "Test_control.misuse#Object#" {
+0 [label="public void misuse(Object obj) throws InterruptedException {\lsynchronized (obj) {\l    while (isAvailable(obj)) {\l      obj.wait();\l    }\l  }\l}\l\l" shape=box style=dotted]
+1 [label="Object.wait()" shape=box]
+2 [label="Test_control.isAvailable()" shape=box]
+}

@@ -1,0 +1,4 @@
+digraph "Test_conditional_op.m#int#int#" {
+0 [label="void m(int a,int b){\l  if (!(a > 1) && b > 2) {\l    m(a,b);\l  }\l}\l\l" shape=box style=dotted]
+1 [label="Test_conditional_op.m()" shape=box]
+}

@@ -1,0 +1,4 @@
+digraph "Test_anonymous_class.m1#" {
+0 [label="void m1(){\l  SwingUtilities.invokeLater(new Runnable(){\l    public void run(){\l      new Object();\l    }\l  }\l);\l}\l\l" shape=box style=dotted]
+1 [label="SwingUtilities.invokeLater()" shape=box]
+}

@@ -1,0 +1,14 @@
+digraph "Test_data_node.m#" {
+0 [label="void m(){\l  v1=m1();\l  v2=m2(v1);\l  v3=m3(v1);\l  m4(v2,v3);\l  v1=m1();\l  v2=m2(v1);\l  v3=m3(v1);\l  m4(v2,v3);\l  m4(v2,v3);\l}\l\l" shape=box style=dotted]
+1 [label="Test_data_node.m1()" shape=box]
+2 [label="Test_data_node.m1()" shape=box]
+3 [label="Test_data_node.m2()" shape=box]
+4 [label="Test_data_node.m2()" shape=box]
+5 [label="Test_data_node.m3()" shape=box]
+6 [label="Test_data_node.m3()" shape=box]
+7 [label="Test_data_node.m4()" shape=box]
+8 [label="Test_data_node.m4()" shape=box]
+9 [label="Test_data_node.m4()" shape=box]
+7 -> 2 [label="order" style=dotted];
+8 -> 9 [label="order" style=dotted];
+}

@@ -1,0 +1,4 @@
+digraph "Test_array_type.m2#" {
+0 [label="void m2(){\l  int[] a=new int[]{1,2};\l  System.out.println(a);\l}\l\l" shape=box style=dotted]
+1 [label="PrintStream.println()" shape=box]
+}

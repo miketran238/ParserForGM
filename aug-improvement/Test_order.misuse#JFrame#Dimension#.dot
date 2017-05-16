@@ -1,0 +1,6 @@
+digraph "Test_order.misuse#JFrame#Dimension#" {
+0 [label="public void misuse(JFrame f,Dimension d){\l  f.pack();\l  f.setPreferredSize(d);\l}\l\l" shape=box style=dotted]
+1 [label="Component.setPreferredSize()" shape=box]
+2 [label="Window.pack()" shape=box]
+2 -> 1 [label="order" style=dotted];
+}

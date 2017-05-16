@@ -1,0 +1,7 @@
+digraph "Test_finally.getFullFont#" {
+0 [label="protected void getFullFont() throws IOException {\l  RandomAccessFileOrArray rf2=null;\l  try {\l    rf2.reOpen();\l    rf2.readFully(b);\l  }\l  finally {\l    try {\l      if (rf2 != null) {\l        rf2.close();\l      }\l    }\l catch (    Exception e) {\l    }\l  }\l}\l\l" shape=box style=dotted]
+1 [label="RandomAccessFileOrArray.close()" shape=box]
+2 [label="RandomAccessFileOrArray.reOpen()" shape=box]
+3 [label="RandomAccessFileOrArray.readFully()" shape=box]
+2 -> 3 [label="order" style=dotted];
+}

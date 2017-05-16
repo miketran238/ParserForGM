@@ -1,0 +1,4 @@
+digraph "Test_sync.onEvent#String#String#" {
+0 [label="public void onEvent(String sender,String event){\lsynchronized (map) {\l    map.put(sender,event);\l  }\l}\l\l" shape=box style=dotted]
+1 [label="Map.put()" shape=box]
+}

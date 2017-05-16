@@ -1,0 +1,12 @@
+digraph "Test_try.pattern2#OutputStream#String#" {
+0 [label="public void pattern2(OutputStream out,String value) throws IOException {\l  Writer writer=null;\l  try {\l    writer=new PrintWriter(out);\l    writer.equals(null);\l    writer.write(value);\l    writer.close();\l  }\l catch (  IOException e) {\l    writer.equals(null);\l    if (writer != null && writer.equals(null)) {\l      writer.close();\l    }\l  }\l}\l\l" shape=box style=dotted]
+1 [label="AutoCloseable.close()" shape=box]
+2 [label="AutoCloseable.close()" shape=box]
+3 [label="Object.equals()" shape=box]
+4 [label="Object.equals()" shape=box]
+5 [label="Object.equals()" shape=box]
+6 [label="Writer.write()" shape=box]
+6 -> 2 [label="order" style=dotted];
+4 -> 3 [label="order" style=dotted];
+5 -> 6 [label="order" style=dotted];
+}

@@ -1,0 +1,32 @@
+digraph "InverseStore.getDefaultName#" {
+0 [label="/** \l * Gets the full name by traversing the hierarchy using only the index 0.\l * @return the full name\l */\lpublic String getDefaultName(){\l  InverseStore store=this;\l  while (true) {\l    Object obj=store.follow.get(0);\l    if (obj instanceof String)     return (String)obj;\l    store=(InverseStore)obj;\l  }\l}\l\l" shape=box style=dotted]
+1 [label="=" shape=box]
+2 [label="=" shape=box]
+3 [label="=" shape=box]
+4 [label="=" shape=box]
+5 [label="ArrayList" shape=ellipse]
+6 [label="InverseStore" shape=ellipse]
+7 [label="InverseStore.<cast>" shape=box]
+8 [label="List.get()" shape=box]
+9 [label="Object" shape=ellipse]
+10 [label="Object" shape=ellipse]
+11 [label="Object" shape=ellipse]
+12 [label="String.<cast>" shape=box]
+13 [label="boolean" shape=box]
+14 [label="int" shape=ellipse]
+15 [label="return" shape=box]
+7 -> 1 [label="dep" style=dotted];
+7 -> 1 [label="para1" style=dotted];
+13 -> 2 [label="dep" style=dotted];
+13 -> 2 [label="para1" style=dotted];
+8 -> 3 [label="dep" style=dotted];
+8 -> 3 [label="para1" style=dotted];
+6 -> 4 [label="para1" style=dotted];
+10 -> 7 [label="para1" style=dotted];
+5 -> 8 [label="recv" style=dotted];
+14 -> 8 [label="para1" style=dotted];
+11 -> 12 [label="para1" style=dotted];
+9 -> 13 [label="para1" style=dotted];
+3 -> 13 [label="dep" style=dotted];
+12 -> 15 [label="para1" style=dotted];
+}

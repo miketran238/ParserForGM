@@ -1,0 +1,6 @@
+digraph "Test_collapse1.after#" {
+0 [label="public void after(){\l  StringBuffer sb=new StringBuffer();\l  sb.append(\"\");\l  sb.toString();\l}\l\l" shape=box style=dotted]
+1 [label="AbstractStringBuilder.append()" shape=box]
+2 [label="Object.toString()" shape=box]
+1 -> 2 [label="order" style=dotted];
+}

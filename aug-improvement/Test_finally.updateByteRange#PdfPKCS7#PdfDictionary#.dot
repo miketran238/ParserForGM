@@ -1,0 +1,19 @@
+digraph "Test_finally.updateByteRange#PdfPKCS7#PdfDictionary#" {
+0 [label="private void updateByteRange(PdfPKCS7 pkcs7,PdfDictionary v){\l  PdfArray b=v.getAsArray(PdfName.BYTERANGE);\l  RandomAccessFileOrArray rf=reader.getSafeFile();\l  try {\l    rf.reOpen();\l    byte buf[]=new byte[8192];\l    for (int k=0; k < b.size(); ++k) {\l      int start=b.getAsNumber(k).intValue();\l      int length=b.getAsNumber(++k).intValue();\l      rf.seek(start);\l      while (length > 0) {\l        int rd=rf.read(buf,0,Math.min(length,buf.length));\l        if (rd <= 0)         break;\l        length-=rd;\l        pkcs7.update(buf,0,rd);\l      }\l    }\l  }\l catch (  Exception e) {\l    throw new ExceptionConverter(e);\l  }\l finally {\l    try {\l      rf.close();\l    }\l catch (    Exception e) {\l    }\l  }\l}\l\l" shape=box style=dotted]
+1 [label="Math.min()" shape=box]
+2 [label="PdfArray.getAsNumber()" shape=box]
+3 [label="PdfArray.getAsNumber()" shape=box]
+4 [label="PdfArray.size()" shape=box]
+5 [label="PdfDictionary.getAsArray()" shape=box]
+6 [label="PdfPKCS7.update()" shape=box]
+7 [label="RandomAccessFileOrArray.close()" shape=box]
+8 [label="RandomAccessFileOrArray.reOpen()" shape=box]
+9 [label="RandomAccessFileOrArray.read()" shape=box]
+10 [label="RandomAccessFileOrArray.seek()" shape=box]
+11 [label="UNKNOWN.getSafeFile()" shape=box]
+12 [label="UNKNOWN.intValue()" shape=box]
+13 [label="UNKNOWN.intValue()" shape=box]
+1 -> 9 [label="order" style=dotted];
+3 -> 12 [label="order" style=dotted];
+2 -> 13 [label="order" style=dotted];
+}

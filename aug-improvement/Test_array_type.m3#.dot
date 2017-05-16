@@ -1,0 +1,4 @@
+digraph "Test_array_type.m3#" {
+0 [label="void m3(){\l  Test[] a=new Test[]{t1,t2};\l  System.out.println(a);\l}\l\l" shape=box style=dotted]
+1 [label="PrintStream.println()" shape=box]
+}

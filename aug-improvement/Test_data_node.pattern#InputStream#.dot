@@ -1,0 +1,5 @@
+digraph "Test_data_node.pattern#InputStream#" {
+0 [label="void pattern(InputStream in) throws IOException {\l  byte[] spoolBuffer=new byte[0x2000];\l  int read;\l  try {\l    while ((read=in.read(spoolBuffer)) > 0) {\l    }\l  }\l  finally {\l    in.close();\l  }\l}\l\l" shape=box style=dotted]
+1 [label="InputStream.close()" shape=box]
+2 [label="InputStream.read()" shape=box]
+}

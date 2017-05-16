@@ -1,0 +1,69 @@
+digraph "InverseStore.isSimilar#String#" {
+0 [label="/** \l * Search the current node for a similar name. A similar name starts with the same name but has a different index. For example, \"detail[3]\" is similar to \"detail[9]\". The main use is to discard names that correspond to out of bounds records.\l * @param name the name to search\l * @return <CODE>true</CODE> if a similitude was found\l */\lpublic boolean isSimilar(String name){\l  int idx=name.indexOf('[');\l  name=name.substring(0,idx + 1);\l  for (int k=0; k < part.size(); ++k) {\l    if (part.get(k).startsWith(name))     return true;\l  }\l  return false;\l}\l\l" shape=box style=dotted]
+1 [label="<a>" shape=box]
+2 [label="<a>" shape=box]
+3 [label="<r>" shape=box]
+4 [label="=" shape=box]
+5 [label="=" shape=box]
+6 [label="=" shape=box]
+7 [label="=" shape=box]
+8 [label="=" shape=box]
+9 [label="=" shape=box]
+10 [label="ArrayList" shape=ellipse]
+11 [label="ArrayList" shape=ellipse]
+12 [label="Collection.size()" shape=box]
+13 [label="List.get()" shape=box]
+14 [label="String" shape=ellipse]
+15 [label="String" shape=ellipse]
+16 [label="String.indexOf()" shape=box]
+17 [label="String.startsWith()" shape=box]
+18 [label="String.substring()" shape=box]
+19 [label="boolean" shape=ellipse]
+20 [label="boolean" shape=ellipse]
+21 [label="char" shape=ellipse]
+22 [label="int" shape=ellipse]
+23 [label="int" shape=ellipse]
+24 [label="int" shape=ellipse]
+25 [label="int" shape=ellipse]
+26 [label="int" shape=ellipse]
+27 [label="int" shape=ellipse]
+28 [label="int" shape=ellipse]
+29 [label="number" shape=ellipse]
+30 [label="return" shape=box]
+31 [label="return" shape=box]
+26 -> 1 [label="para1" style=dotted];
+23 -> 1 [label="para2" style=dotted];
+7 -> 1 [label="dep" style=dotted];
+28 -> 2 [label="para1" style=dotted];
+29 -> 2 [label="para2" style=dotted];
+25 -> 3 [label="para1" style=dotted];
+5 -> 3 [label="dep" style=dotted];
+12 -> 3 [label="para2" style=dotted];
+2 -> 4 [label="dep" style=dotted];
+2 -> 4 [label="para1" style=dotted];
+27 -> 5 [label="para1" style=dotted];
+9 -> 5 [label="dep" style=dotted];
+3 -> 6 [label="dep" style=dotted];
+3 -> 6 [label="para1" style=dotted];
+16 -> 7 [label="dep" style=dotted];
+16 -> 7 [label="para1" style=dotted];
+17 -> 8 [label="dep" style=dotted];
+17 -> 8 [label="para1" style=dotted];
+18 -> 9 [label="dep" style=dotted];
+18 -> 9 [label="para1" style=dotted];
+11 -> 12 [label="recv" style=dotted];
+5 -> 12 [label="dep" style=dotted];
+10 -> 13 [label="recv" style=dotted];
+24 -> 13 [label="para1" style=dotted];
+21 -> 16 [label="para1" style=dotted];
+14 -> 16 [label="recv" style=dotted];
+15 -> 17 [label="para1" style=dotted];
+13 -> 17 [label="recv" style=dotted];
+22 -> 18 [label="para1" style=dotted];
+7 -> 18 [label="dep" style=dotted];
+1 -> 18 [label="para2" style=dotted];
+14 -> 18 [label="recv" style=dotted];
+19 -> 30 [label="para1" style=dotted];
+20 -> 31 [label="para1" style=dotted];
+4 -> 31 [label="dep" style=dotted];
+}
